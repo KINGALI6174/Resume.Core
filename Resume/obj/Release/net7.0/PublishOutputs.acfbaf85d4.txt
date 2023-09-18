@@ -1,0 +1,7 @@
+C:\Users\Ali\source\repos\Resume.Core\Resume\obj\Release\net7.0\PubTmp\Out\Resume.exe
+C:\Users\Ali\source\repos\Resume.Core\Resume\obj\Release\net7.0\PubTmp\Out\appsettings.Development.json
+C:\Users\Ali\source\repos\Resume.Core\Resume\obj\Release\net7.0\PubTmp\Out\appsettings.json
+C:\Users\Ali\source\repos\Resume.Core\Resume\obj\Release\net7.0\PubTmp\Out\Resume.dll
+C:\Users\Ali\source\repos\Resume.Core\Resume\obj\Release\net7.0\PubTmp\Out\Resume.deps.json
+C:\Users\Ali\source\repos\Resume.Core\Resume\obj\Release\net7.0\PubTmp\Out\Resume.runtimeconfig.json
+C:\Users\Ali\source\repos\Resume.Core\Resume\obj\Release\net7.0\PubTmp\Out\Resume.pdb
