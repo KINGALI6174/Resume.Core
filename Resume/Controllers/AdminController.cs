@@ -8,5 +8,11 @@ namespace Resume.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Index(string email,string password)
+        {
+            return View();
+        }
     }
 }
