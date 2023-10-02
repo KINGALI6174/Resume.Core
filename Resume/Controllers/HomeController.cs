@@ -18,12 +18,22 @@ namespace Resume.Controllers
 			return View();
 		}
 
-		public IActionResult Privacy()
+		public IActionResult About()
 		{
 			return View();
 		}
 
         public IActionResult Contact()
+        {
+            return View();
+        }
+
+        public IActionResult Portfolio()
+        {
+            return View();
+        }
+
+        public IActionResult Blog()
         {
             return View();
         }
