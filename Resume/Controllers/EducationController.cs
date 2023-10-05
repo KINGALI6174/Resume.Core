@@ -6,24 +6,17 @@ namespace Resume.Controllers
 {
     public class EducationController : Controller
     {
-        private ResumeDbContext _context;
-
-        public EducationController(ResumeDbContext contex)
-        {
-            _context = contex;
-        }
+        
 
         [HttpGet]
-        public IActionResult ListOfEducation()
+        public async Task<IActionResult> ListOfEducation()
         {
-            List<Education> ListOfEducation = _context.Educations.ToList();
             return View();
         }
 
-        public IActionResult CeratAnEducation()
+        public async Task<IActionResult> CreatAnEducation()
         {
-
-            return View();
+            return RedirectToAction(nameof(ListOfEducation));
         }
     }
 }
