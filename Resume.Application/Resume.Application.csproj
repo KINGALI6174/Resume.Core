@@ -7,7 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Resume\Resume.csproj" />
+    <ProjectReference Include="..\Resume.Domain\Resume.Domain.csproj" />
+    <ProjectReference Include="..\Resume.Infrastructuer\Resume.Infrastructuer.csproj" />
   </ItemGroup>
 
 </Project>

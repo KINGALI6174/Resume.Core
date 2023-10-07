@@ -28,8 +28,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume\\Resume.csproj": {
-                "projectPath": "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume\\Resume.csproj"
+              "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume.Domain\\Resume.Domain.csproj": {
+                "projectPath": "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume.Domain\\Resume.Domain.csproj"
+              },
+              "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume.Infrastructuer\\Resume.Infrastructuer.csproj": {
+                "projectPath": "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume.Infrastructuer\\Resume.Infrastructuer.csproj"
               }
             }
           }
@@ -63,14 +66,14 @@
         }
       }
     },
-    "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume\\Resume.csproj": {
+    "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume.Domain\\Resume.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume\\Resume.csproj",
-        "projectName": "Resume",
-        "projectPath": "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume\\Resume.csproj",
+        "projectUniqueName": "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume.Domain\\Resume.Domain.csproj",
+        "projectName": "Resume.Domain",
+        "projectPath": "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume.Domain\\Resume.Domain.csproj",
         "packagesPath": "C:\\Users\\Ali\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume\\obj\\",
+        "outputPath": "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -98,24 +101,75 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume.Infrastructuer\\Resume.Infrastructuer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume.Infrastructuer\\Resume.Infrastructuer.csproj",
+        "projectName": "Resume.Infrastructuer",
+        "projectPath": "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume.Infrastructuer\\Resume.Infrastructuer.csproj",
+        "packagesPath": "C:\\Users\\Ali\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume.Infrastructuer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume.Domain\\Resume.Domain.csproj": {
+                "projectPath": "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume.Domain\\Resume.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.11, )"
             },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
+            "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
               "version": "[7.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[7.0.11, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.11, )"
             }
@@ -132,9 +186,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

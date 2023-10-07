@@ -13,6 +13,6 @@ namespace Resume.Application.Interfaces
 
         Task CreateAnEducation(Education education);
         Task DeleteAnEducation(int educationid);
-        Task GetAnEducationById(int educationid);
+        Task<Education> GetAnEducationById(int educationid);
     }
 }

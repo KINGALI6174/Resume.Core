@@ -1,4 +1,4 @@
-using Resume.Models.ResmeDbContext;
+using Resume.Migrations;
 
 namespace Resume
 {
@@ -11,7 +11,6 @@ namespace Resume
 			// Add services to the container.
 			builder.Services.AddControllersWithViews();
 
-            builder.Services.AddDbContext<ResumeDbContext>();
 
 			var app = builder.Build();
 
