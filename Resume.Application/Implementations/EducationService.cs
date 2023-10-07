@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Resume.Application.Interfaces;
 using Resume.Models.Entities.Education;
 using Resume.Models.ResmeDbContext;
 
+
 namespace Resume.Application.Implementations
 {
-    public class EducationService : IEducationServicece
+    public class IEducationService : IEducationServicece
     {
         private ResumeDbContext _context;
 
-        public EducationService(ResumeDbContext contex)
+        public IEducationService(ResumeDbContext contex)
         {
             _context = contex;
         }

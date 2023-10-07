@@ -961,22 +961,31 @@
           }
         }
       },
-      "Resume/1.0.0": {
+      "Resume.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Resume.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Resume.Domain.dll": {}
+        }
+      },
+      "Resume.Infrastructuer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.11",
-          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.11"
+          "Microsoft.EntityFrameworkCore.Relational": "7.0.11",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.11",
+          "Resume.Domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Resume.dll": {}
+          "bin/placeholder/Resume.Infrastructuer.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Resume.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+          "bin/placeholder/Resume.Infrastructuer.dll": {}
+        }
       }
     }
   },
@@ -2627,15 +2636,21 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Resume/1.0.0": {
+    "Resume.Domain/1.0.0": {
       "type": "project",
-      "path": "../Resume/Resume.csproj",
-      "msbuildProject": "../Resume/Resume.csproj"
+      "path": "../Resume.Domain/Resume.Domain.csproj",
+      "msbuildProject": "../Resume.Domain/Resume.Domain.csproj"
+    },
+    "Resume.Infrastructuer/1.0.0": {
+      "type": "project",
+      "path": "../Resume.Infrastructuer/Resume.Infrastructuer.csproj",
+      "msbuildProject": "../Resume.Infrastructuer/Resume.Infrastructuer.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Resume >= 1.0.0"
+      "Resume.Domain >= 1.0.0",
+      "Resume.Infrastructuer >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2665,8 +2680,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume\\Resume.csproj": {
-              "projectPath": "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume\\Resume.csproj"
+            "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume.Domain\\Resume.Domain.csproj": {
+              "projectPath": "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume.Domain\\Resume.Domain.csproj"
+            },
+            "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume.Infrastructuer\\Resume.Infrastructuer.csproj": {
+              "projectPath": "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume.Infrastructuer\\Resume.Infrastructuer.csproj"
             }
           }
         }

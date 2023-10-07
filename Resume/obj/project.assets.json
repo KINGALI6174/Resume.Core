@@ -1053,6 +1053,46 @@
             "rid": "win"
           }
         }
+      },
+      "Resume.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Resume.Domain": "1.0.0",
+          "Resume.Infrastructuer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Resume.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Resume.Application.dll": {}
+        }
+      },
+      "Resume.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Resume.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Resume.Domain.dll": {}
+        }
+      },
+      "Resume.Infrastructuer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.11",
+          "Microsoft.EntityFrameworkCore.Relational": "7.0.11",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.11",
+          "Resume.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Resume.Infrastructuer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Resume.Infrastructuer.dll": {}
+        }
       }
     }
   },
@@ -2875,6 +2915,21 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Resume.Application/1.0.0": {
+      "type": "project",
+      "path": "../Resume.Application/Resume.Application.csproj",
+      "msbuildProject": "../Resume.Application/Resume.Application.csproj"
+    },
+    "Resume.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Resume.Domain/Resume.Domain.csproj",
+      "msbuildProject": "../Resume.Domain/Resume.Domain.csproj"
+    },
+    "Resume.Infrastructuer/1.0.0": {
+      "type": "project",
+      "path": "../Resume.Infrastructuer/Resume.Infrastructuer.csproj",
+      "msbuildProject": "../Resume.Infrastructuer/Resume.Infrastructuer.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2882,7 +2937,10 @@
       "Microsoft.EntityFrameworkCore >= 7.0.11",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.11",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.11",
-      "Microsoft.EntityFrameworkCore.Tools >= 7.0.11"
+      "Microsoft.EntityFrameworkCore.Tools >= 7.0.11",
+      "Resume.Application >= 1.0.0",
+      "Resume.Domain >= 1.0.0",
+      "Resume.Infrastructuer >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2911,7 +2969,17 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume.Application\\Resume.Application.csproj": {
+              "projectPath": "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume.Application\\Resume.Application.csproj"
+            },
+            "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume.Domain\\Resume.Domain.csproj": {
+              "projectPath": "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume.Domain\\Resume.Domain.csproj"
+            },
+            "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume.Infrastructuer\\Resume.Infrastructuer.csproj": {
+              "projectPath": "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume.Infrastructuer\\Resume.Infrastructuer.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
