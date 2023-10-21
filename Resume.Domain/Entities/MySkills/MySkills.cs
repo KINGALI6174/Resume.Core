@@ -1,4 +1,4 @@
-﻿namespace Resume.Models.Entities.MySkills
+﻿namespace Resume.Domain.Entities.MySkills
 {
     public class MySkills
     {

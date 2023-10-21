@@ -11,4 +11,8 @@
     <ProjectReference Include="..\Resume.Infrastructuer\Resume.Infrastructuer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DTOs\AdminSite\" />
+  </ItemGroup>
+
 </Project>

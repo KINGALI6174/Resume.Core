@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Resume.Application.Interfaces;
-using Resume.Models.Entities.Education;
+using Resume.Domain.Entities.Education;
 using Resume.Models.ResmeDbContext;
 
 
