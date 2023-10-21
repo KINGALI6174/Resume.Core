@@ -12,7 +12,7 @@ namespace Resume.Domain.Entities.ContactUs
         public string FullName { get; set; }
         public string Mobile { get; set; }
         public string Message { get; set; }
-        public DateTime CreateDate { get; set; }
+        public DateTime CreateDate { get; set; } = DateTime.Now;
         public bool IsSeenByAdmin { get; set; }
     }
 }

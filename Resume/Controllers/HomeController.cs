@@ -6,24 +6,28 @@ using Resume.Domain.Entities.Education;
 using Resume.Domain.Entities.Exprience;
 using Resume.Models.ResmeDbContext;
 using Resume.Application.DTOs.SiteSide.Home_Index;
+using Resume.Domain.Entities.ContactUs;
 using Resume.Domain.Entities.MySkills;
 using Resume.Domain.RepositoryInterface;
 
 namespace Resume.Controllers
 {
-	public class HomeController : Controller
-	{
-		private readonly IEducationRepository _educationRepository;
-		private readonly IExperienceRepository _experienceRepository;
-		private readonly IMySkillRepository _mySkillRepository;
+    public class HomeController : Controller
+    {
+        private readonly IEducationRepository _educationRepository;
+        private readonly IExperienceRepository _experienceRepository;
+        private readonly IMySkillRepository _mySkillRepository;
+        private readonly IContactUsRepository _contactUsRepository;
 
         public HomeController(IEducationRepository educationRepository,
                               IExperienceRepository experienceRepository,
-                              IMySkillRepository mySkillRepository)
+                              IMySkillRepository mySkillRepository,
+                              IContactUsRepository contactUsRepository)
         {
             _educationRepository = educationRepository;
             _experienceRepository = experienceRepository;
             _mySkillRepository = mySkillRepository;
+            _contactUsRepository = contactUsRepository;
         }
 
 
@@ -33,23 +37,35 @@ namespace Resume.Controllers
             List<Education> educations = _educationRepository.GetListOfEducation();
             List<Exprience> expriences = _experienceRepository.GetListOfExperience();
 
-			HomeIndexModelDTO model = new HomeIndexModelDTO();
-			model.Educations = educations;
-			model.Exprience = expriences;
-			model.Myskiils = MySkill;
+            HomeIndexModelDTO model = new HomeIndexModelDTO();
+            model.Educations = educations;
+            model.Exprience = expriences;
+            model.Myskiils = MySkill;
 
             return View(model);
-		}
+        }
 
-		public IActionResult About()
-		{
-			return View();
-		}
+        public IActionResult About()
+        {
+            return View();
+        }
+
+
+
 
         public IActionResult Contact()
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Contact(ContactUs contact)
+        {
+            _contactUsRepository.AddContactUsToDataBase(contact);
+            return View();
+        }
+
+
 
         public IActionResult Portfolio()
         {
@@ -62,9 +78,9 @@ namespace Resume.Controllers
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-		public IActionResult Error()
-		{
-			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-		}
-	}
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+    }
 }

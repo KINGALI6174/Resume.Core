@@ -15,6 +15,7 @@ namespace Resume
             builder.Services.AddScoped<IEducationRepository, EducationRepository>();
             builder.Services.AddScoped<IExperienceRepository, ExperienceRepository>();
             builder.Services.AddScoped<IMySkillRepository, MySkillRepository>();
+            builder.Services.AddScoped<IContactUsRepository,ContactUsRepository>();
             builder.Services.AddDbContext<ResumeDbContext>();
 
 

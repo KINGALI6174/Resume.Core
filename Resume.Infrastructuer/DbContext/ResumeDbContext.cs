@@ -21,5 +21,6 @@ namespace Resume.Models.ResmeDbContext
         public DbSet<MySkills> MySkills { get; set; }
 
         public DbSet<ContactUs> ContactUs { get; set; }
+        public DbSet<ContactUsLocation> ContactUsLocations { get; set; }
     }
 }
