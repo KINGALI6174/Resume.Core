@@ -53,6 +53,23 @@ namespace Resume.Migrations
                     b.ToTable("ContactUs");
                 });
 
+            modelBuilder.Entity("Resume.Domain.Entities.ContactUs.ContactUsLocation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ContactUsLocations");
+                });
+
             modelBuilder.Entity("Resume.Domain.Entities.Education.Education", b =>
                 {
                     b.Property<int>("ID")

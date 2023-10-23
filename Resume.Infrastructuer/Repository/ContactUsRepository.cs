@@ -23,5 +23,11 @@ namespace Resume.Infrastructuer.Repository
             await _context.ContactUs.AddAsync(contactUs);
             await _context.SaveChangesAsync();
         }
+
+        public async Task AddLocationToDataBase(ContactUsLocation location)
+        {
+            await _context.ContactUsLocations.AddAsync(location);
+            await _context.SaveChangesAsync();
+        }
     }
 }

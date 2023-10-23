@@ -1,9 +1,5 @@
-﻿@model Resume.Domain.Entities.ContactUs.ContactUs
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model Resume.Application.DTOs.SiteSide.ContactUs.ContactUsDTO
+
 
 <div class="content" data-simplebar="init">
     <div class="simplebar-wrapper" style="margin: 0px -30px;">
@@ -16,9 +12,9 @@
                         </div>
 
                         <!-- Contact -->
-                        <div class="map section" id="map"></div>
+                       @* <div class="map section" id="map"></div>
                         <h2 class="title title--h2">Contact Form</h2>
-
+*@
                         <form id="" class="contact-form" data-toggle="validator" novalidate="true" method="post" asp-controller="Home" asp-action="Contact">
                             <div class="row">
                                 <div class="form-group col-12 col-md-6">
@@ -38,6 +34,10 @@
                                 </div>*@
                                 <div class="form-group col-12 col-md-12">
                                     <textarea class="textarea form-control" id="messageContact" asp-for="Message" placeholder="Your Message" rows="4" required="required" oninvalid="setCustomValidity('Fill in the field')" onkeyup="setCustomValidity('')" style="overflow: hidden; overflow-wrap: break-word; height: 117.6px;"></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                                <div class="form-group col-12 col-md-12">
+                                    <textarea class="textarea form-control" id="messageContact" asp-for="Address" placeholder="Your Address" rows="4" required="required" oninvalid="setCustomValidity('Fill in the field')" onkeyup="setCustomValidity('')" style="overflow: hidden; overflow-wrap: break-word; height: 117.6px;"></textarea>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
