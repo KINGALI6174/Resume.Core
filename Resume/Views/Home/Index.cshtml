@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Resume.Application.DTOs.SiteSide.Home_Index.HomeIndexModelDTO
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -12,52 +13,47 @@
     <div class="section">
         <h2 class="title title--h2"><img class="title-icon" src="/SiteSample/assets/icons/icon-education.svg" alt="" /> Education</h2>
         <div class="timeline">
-            <!-- Item -->
-            <article class="timeline__item">
-                <h5 class="title title--h3 timeline__title">University School of the computer science</h5>
-                <span class="timeline__period">2017 — 2021</span>
-                <p class="timeline__description">Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.</p>
-            </article>
 
-            <!-- Item -->
-            <article class="timeline__item">
-                <h5 class="title title--h3 timeline__title">University School of the artificial intelligence</h5>
-                <span class="timeline__period">2021 — 2023</span>
-                <p class="timeline__description">Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est omnis..</p>
-            </article>
+            @foreach (var item in Model.Educations)
+            {
+                <!-- Item -->
+                <article class="timeline__item">
+                    <h5 class="title title--h3 timeline__title">
+                       @item.EducationTitle
+                    </h5>
+                    <span class="timeline__period">
+                        @item.EducationDuration
+                    </span>
+                    <p class="timeline__description">
+                        @item.EducationDescription
+                    </p>
+                </article>
 
-            <!-- Item -->
-            <article class="timeline__item">
-                <h5 class="title title--h3 timeline__title">High School of Art and Design</h5>
-                <span class="timeline__period">2003 — 2005</span>
-                <p class="timeline__description">Duis aute irure dolor in reprehenderit in voluptate, quila voluptas  mag odit aut fugit, sed consequuntur magni dolores eos.</p>
-            </article>
+            }
+
+
+
         </div>
     </div>
 
     <div class="section">
         <h2 class="title title--h2"><img class="title-icon" src="/SiteSample/assets/icons/icon-experience.svg" alt="" /> Experience</h2>
         <div class="timeline">
+            @foreach (var item in Model.Exprience)
+            {
             <!-- Item -->
             <article class="timeline__item">
-                <h5 class="title title--h3 timeline__title">Creative Director</h5>
-                <span class="timeline__period">2015 — Present</span>
-                <p class="timeline__description">Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas molestias exceptur.</p>
+                <h5 class="title title--h3 timeline__title">
+                    @item.ExprienceTitle
+                </h5>
+                <span class="timeline__period">
+                    @item.ExprienceDuration
+                </span>
+                <p class="timeline__description">
+                    @item.ExprienceDescription
+                </p>
             </article>
-
-            <!-- Item -->
-            <article class="timeline__item">
-                <h5 class="title title--h3 timeline__title">Art Director</h5>
-                <span class="timeline__period">2013 — 2015</span>
-                <p class="timeline__description">Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.</p>
-            </article>
-
-            <!-- Item -->
-            <article class="timeline__item">
-                <h5 class="title title--h3 timeline__title">Web Designer</h5>
-                <span class="timeline__period">2010 — 2013</span>
-                <p class="timeline__description">Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.</p>
-            </article>
+            }
         </div>
     </div>
 
@@ -65,37 +61,23 @@
     <div class="section">
         <h2 class="title title--h2">My Skills</h2>
         <div class="box-gray">
+            
+            @foreach (var item in Model.Myskiils)
+            {
             <!-- Progress -->
             <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-text"><span>Web Design</span><span>40%</span></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="@item.Percentage" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-text"><span>Web Design</span><span>
+                        @item.Percentage
+                    </span></div>
                 </div>
-                <div class="progress-text"><span>Web Design</span></div>
+                <div class="progress-text"><span>
+                    @item.SkillTitle
+                </span></div>
             </div>
 
-            <!-- Progress -->
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-text"><span>Asp.Net </span><span>75%</span></div>
-                </div>
-                <div class="progress-text"><span>Graphic Design</span></div>
-            </div>
+            }
 
-            <!-- Progress -->
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-text"><span>C#</span><span>85%</span></div>
-                </div>
-                <div class="progress-text"><span>C#</span></div>
-            </div>
-
-            <!-- Progress -->
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-text"><span>Python</span><span>50%</span></div>
-                </div>
-                <div class="progress-text"><span>Python</span></div>
-            </div>
         </div>
     </div>
 </div><!-- Content End -->
