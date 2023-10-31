@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KhMeKKVpFXYYpxet4Fv9OJhuBYQpvBRKGrB4EzFENVA=",
+  "Hash": "tlbznyYXK8t9ADggo0AdRffEq9KGCRr2Raw92T/XJEE=",
   "Source": "Resume",
   "BasePath": "_content/Resume",
   "Mode": "Default",
@@ -1715,6 +1715,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\AdminSample\\dist\\img\\boxed-bg.png"
+    },
+    {
+      "Identity": "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume\\wwwroot\\AdminSample\\dist\\img\\credit\\1.jpg",
+      "SourceId": "Resume",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume\\wwwroot\\",
+      "BasePath": "_content/Resume",
+      "RelativePath": "AdminSample/dist/img/credit/1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\AdminSample\\dist\\img\\credit\\1.jpg"
     },
     {
       "Identity": "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume\\wwwroot\\AdminSample\\dist\\img\\credit\\american-express.png",

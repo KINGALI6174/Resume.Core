@@ -18,40 +18,20 @@ namespace Resume.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IEducationRepository _educationRepository;
-        private readonly IExperienceRepository _experienceRepository;
-        private readonly IMySkillRepository _mySkillRepository;
-        private readonly IContactUsService _contactUsService; 
+        private readonly IDashboardService _boardService;
+        private readonly IContactUsService _contactUsService;
         private readonly IToastNotification _toastNotification;
         private readonly INotyfService _notificationService;
 
-        public HomeController(IEducationRepository educationRepository,
-                              IExperienceRepository experienceRepository,
-                              IMySkillRepository mySkillRepository,
-                              IContactUsService contactUsService ,
-                              IToastNotification toastNotification,
-                              INotyfService notificationService)
+        public HomeController(IDashboardService boardService)
         {
-            _educationRepository = educationRepository;
-            _experienceRepository = experienceRepository;
-            _mySkillRepository = mySkillRepository;
-            _contactUsService = contactUsService;
-            _toastNotification = toastNotification;
-            _notificationService = notificationService;
+            _boardService = boardService;
         }
 
 
         public async Task<IActionResult> Index()
         {
-            List<MySkills> MySkill = _mySkillRepository.GetListOfMySkills();
-            List<Education> educations = _educationRepository.GetListOfEducation();
-            List<Exprience> expriences = _experienceRepository.GetListOfExperience();
-
-            HomeIndexModelDTO model = new HomeIndexModelDTO();
-            model.Educations = educations;
-            model.Exprience = expriences;
-            model.Myskiils = MySkill;
-
+            var model = await _boardService.FillDashboardModel();
             return View(model);
         }
 
@@ -68,7 +48,7 @@ namespace Resume.Controllers
             return View();
         }
 
-        [HttpPost]
+        [HttpPost , ValidateAntiForgeryToken]
         public async Task<IActionResult> Contact(ContactUsDTO contactUsDTO)
         {
             await _contactUsService.AddNewContactUsMessage(contactUsDTO);
@@ -90,10 +70,6 @@ namespace Resume.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        
     }
 }

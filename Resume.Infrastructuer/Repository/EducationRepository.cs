@@ -19,6 +19,12 @@ namespace Resume.Infrastructuer.Repository
             _resumeDbContext = resumeDbContext;
         }
 
+        public async Task AddEducationToDataBase(Education education)
+        {
+            await _resumeDbContext.AddAsync(education);
+            await _resumeDbContext.SaveChangesAsync();
+        }
+
         public List<Education> GetListOfEducation()
         {
             return  _resumeDbContext.Educations.ToList();

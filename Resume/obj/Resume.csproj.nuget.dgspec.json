@@ -292,6 +292,10 @@
               "target": "Package",
               "version": "[7.0.12, )"
             },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
             "NToastNotify": {
               "target": "Package",
               "version": "[8.0.0, )"
