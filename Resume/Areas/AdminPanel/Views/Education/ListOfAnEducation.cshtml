@@ -47,8 +47,17 @@
                                             @item.EducationDuration
                                         </td>
                                         <td>
-                                            <a class="btn btn-outline-primary">ویرایش</a>
-                                            <a class="btn btn-outline-danger">حذف</a>
+                                            <a class="btn btn-outline-primary"
+                                               asp-area="Adminpanel"
+                                               asp-controller="Education"
+                                               asp-action="EditAnEducation"
+                                               asp-route-educationid="@item.ID">ویرایش</a>
+                                            <a
+                                                class="btn btn-outline-danger"
+                                                asp-area="Adminpanel"
+                                                asp-controller="Education"
+                                                asp-action="DeleteAnEducation"
+                                                asp-route-educationid="@item.ID">حذف</a>
                                         </td>
                                     </tr>
                                 }

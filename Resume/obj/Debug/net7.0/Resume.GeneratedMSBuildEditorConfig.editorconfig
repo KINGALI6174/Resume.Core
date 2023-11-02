@@ -20,6 +20,14 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xFZHVjYXRpb25cQ3JlYXRlQW5FZHVjYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Ali/source/repos/Resume.Core/Resume/Areas/AdminPanel/Views/Education/DeleteAnEducation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xFZHVjYXRpb25cRGVsZXRlQW5FZHVjYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ali/source/repos/Resume.Core/Resume/Areas/AdminPanel/Views/Education/EditAnEducation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xFZHVjYXRpb25cRWRpdEFuRWR1Y2F0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Ali/source/repos/Resume.Core/Resume/Areas/AdminPanel/Views/Education/ListOfAnEducation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xFZHVjYXRpb25cTGlzdE9mQW5FZHVjYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

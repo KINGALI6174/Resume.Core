@@ -29,6 +29,21 @@ namespace Resume.Application.Services.Implement
             await _educationRepository.AddEducationToDataBase(education);
         }
 
+        public async Task DeleteAnEducation(Education education)
+        {
+            await _educationRepository.DeleteAnEducation(education);
+        }
+
+        public async Task EditAnEducation(Education education)
+        {
+            await _educationRepository.EditAnEducation(education);
+        }
+
+        public async Task<Education> GetAnEducationById(int educationid)
+        {
+            return await _educationRepository.getAnEducationById(educationid);
+        }
+
         public List<Education> GetEducationsList()
         {
             return _educationRepository.GetListOfEducation();

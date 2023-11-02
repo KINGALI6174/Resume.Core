@@ -16,5 +16,11 @@ namespace Resume.Application.Services.Interface
         List<ListOfAnEducationAdminSideDTO> GetListOfAnEducationAdminSideList();
 
         Task AddEducationtoDataBase(CreateAnEducationAdminSideDTO model);
+
+        Task<Education> GetAnEducationById(int educationid);
+
+        Task EditAnEducation(Education education);
+
+        Task DeleteAnEducation(Education education);
     }
 }
