@@ -33,6 +33,10 @@ namespace Resume
             builder.Services.AddScoped<IMySkillRepository, MySkillRepository>();
             builder.Services.AddScoped<IContactUsRepository, ContactUsRepository>();
             builder.Services.AddScoped<IContactUsService, ContactUsService>();
+            builder.Services.AddScoped<IDashboardService, DashboardService>();
+            builder.Services.AddScoped<IEducationService, EducationService>();
+            builder.Services.AddScoped<IExperienceService, ExperienceService>();
+            builder.Services.AddScoped<IMySkillService, MySkillService>();
             builder.Services.AddDbContext<ResumeDbContext>();
 
 
@@ -54,6 +58,14 @@ namespace Resume
             app.UseAuthorization();
             app.UseNToastNotify();
             app.UseNotyf();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "areas",
+                    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                );
+            });
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");

@@ -1,0 +1,76 @@
+﻿@using Resume.Domain.Entities.Education
+@model List<Resume.Domain.Entities.Education.Education>
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">لیست تحصیلات</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-left">
+                    <li class="breadcrumb-item"><a href="">داشبورد ادمین</a></li>
+                </ol>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- /.col -->
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">جدول تحصیلات</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body p-0">
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <th style="width: 10px">#</th>
+                                    <th>نام مدرک تحصیلی</th>
+                                    <th>بازه زمانی</th>
+                                    <th >امکانات</th>
+                                </tr>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @item.ID
+                                        </td>
+                                        <td>
+                                            @item.EducationTitle
+                                        </td>
+                                        <td>
+                                            @item.EducationDuration
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-outline-primary"
+                                               asp-area="Adminpanel"
+                                               asp-controller="Education"
+                                               asp-action="EditAnEducation"
+                                               asp-route-educationid="@item.ID">ویرایش</a>
+                                            <a
+                                                class="btn btn-outline-danger"
+                                                asp-area="Adminpanel"
+                                                asp-controller="Education"
+                                                asp-action="DeleteAnEducation"
+                                                asp-route-educationid="@item.ID">حذف</a>
+                                        </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+
+    </div><!-- /.container-fluid -->
+</section>

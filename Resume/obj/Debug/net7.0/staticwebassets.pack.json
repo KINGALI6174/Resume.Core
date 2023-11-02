@@ -373,6 +373,10 @@
       "PackagePath": "staticwebassets\\AdminSample\\dist\\img\\boxed-bg.png"
     },
     {
+      "Id": "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume\\wwwroot\\AdminSample\\dist\\img\\credit\\1.jpg",
+      "PackagePath": "staticwebassets\\AdminSample\\dist\\img\\credit\\1.jpg"
+    },
+    {
       "Id": "C:\\Users\\Ali\\source\\repos\\Resume.Core\\Resume\\wwwroot\\AdminSample\\dist\\img\\credit\\american-express.png",
       "PackagePath": "staticwebassets\\AdminSample\\dist\\img\\credit\\american-express.png"
     },
